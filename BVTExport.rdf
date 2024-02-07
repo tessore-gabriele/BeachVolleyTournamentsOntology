@@ -1,0 +1,2292 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#"
+     xml:base="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments"
+     xmlns:bag="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#"
+     xmlns:bvt="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:list="http://www.ontologydesignpatterns.org/cp/owl/list.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:sequence="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#"
+     xmlns:collectionentity="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#"
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments">
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/list.owl"/>
+        <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <terms:creator xml:lang="it">Tessore Gabriele</terms:creator>
+        <terms:description xml:lang="en">An ontology to model Beach Volley tournaments, the matches that take places during one, and the players and the teams that play in them</terms:description>
+        <terms:title xml:lang="en">BeachVolleyTournamentOntology</terms:title>
+        <vann:preferredNamespacePrefix xml:lang="en">bvt:</vann:preferredNamespacePrefix>
+        <rdfs:label xml:lang="en">Beach Volley Tournament</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#coversRequirements -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#coversRequirements">
+        <rdfs:comment>This annotation property is used for exemplifying possible requirements the content pattern provides a solution for. Requirements are expressed as natural language competency questions.</rdfs:comment>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#extractedFrom -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#extractedFrom">
+        <rdfs:comment>This annotation property should be assigned with a URI, which points to the possible reference ontology which the annotated pattern was extracted from (i.e. the reference ontology that the ontology elements have been deeply or partially cloned by). The range is not explicit in the definition of the annotation property because it would turn the ontology to OWL Full. E.g. The participation pattern is extracted from the Dolce Ultra Lite ontology, hence the value for this annotation property is http://www.ontologydesignpatterns.org/ont/dul/DUL.owl</rdfs:comment>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasAuthor -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasAuthor"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasComponent -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasComponent"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasConsequences -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasConsequences">
+        <rdfs:comment>This annotation property is used for briefly describing the benefits and/or possible trade-offs when using the CP.</rdfs:comment>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasIntent -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasIntent">
+        <rdfs:comment>This annotation property is used in order to describe the intent of the content pattern.</rdfs:comment>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#isSpecializationOf -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#isSpecializationOf">
+        <rdfs:comment>This annotation property is useful for content ontology design patterns and its elements. Its value is a URI, which refers either to a content ontology design pattern that is specialized by the annotated one, or to an ontology element that is specialized by the annotated one.</rdfs:comment>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#reengineeredFrom -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#reengineeredFrom">
+        <rdfs:comment>This annotation property should be assigned with a URI, which points to the concept schema, page, or anything else from which the annotated pattern was reengineered.  If the source does not have any URI e.g., a printed book, this property value should provide information as precise as possible in order to identify the source. This property is alternative to the extractedFrom property because it is used when the pattern come from a concept schema which is not an owl ontology. For example content ontology design patterns, which are reengineered from data model patterns, rdf schemas, etc. should be annotatd with this property. E.g. The basicpersonalfoaf pattern is extracted from the rdf FOAF specification, hence the value for this annotation property is http://xmlns.com/foaf/spec/20071002.rdf</rdfs:comment>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#relatedCPs -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#relatedCPs">
+        <rdfs:comment>This annotation property can be used to indicate other CPs (if any) that specialize, generalize, inlcude, or are components of the CP. Furthermore, this field may indicate other CPs that are typically used in conjunction with the described one. Important similarities and differences with other patterns can be also described here.</rdfs:comment>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#scenarios -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#scenarios">
+        <rdfs:comment>This annotation property is used for describing examples of instantiation of the Content OP. For example, for the part-of Content OP (which represents part-whole relations) a possible scenario is the sentence: &quot;the brain is part of the human body&quot;. Scenarios are expressed as natural language sentences.</rdfs:comment>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#minQualifiedCardinality -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#minQualifiedCardinality"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition">
+        <rdfs:label xml:lang="en">definition</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#example -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example">
+        <rdfs:label xml:lang="en">example</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#scopeNote -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#scopeNote">
+        <rdfs:label xml:lang="en">scope note</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/bag.owl#hasItem -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#hasItem">
+        <rdfs:comment>has item - The link to every item of the Bag</rdfs:comment>
+        <rdfs:label>has item</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/bag.owl#itemContent -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#itemContent">
+        <rdfs:comment>itemContent - The link to the actual resource to which the item refers.</rdfs:comment>
+        <rdfs:label>item content</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/bag.owl#itemOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#itemOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#isMemberOf"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Item"/>
+        <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Bag"/>
+        <rdfs:comment>item of - The link from an item to the Bag where it is contained</rdfs:comment>
+        <rdfs:label>item of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#hasMember -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#hasMember">
+        <rdfs:comment>A relation between collections and entities, e.g. &apos;my collection of saxophones includes an old Adolphe Sax original alto&apos; (i.e. my collection has member an Adolphe Sax alto).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl"/>
+        <rdfs:label xml:lang="en">has member</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#isMemberOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#isMemberOf">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#Collection"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl"/>
+        <rdfs:label xml:lang="en">is member of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/list.owl#firstItemOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/list.owl#firstItemOf">
+        <rdfs:label>first item of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/list.owl#hasFirstItem -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/list.owl#hasFirstItem">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment>first item - The link to the first item of the list</rdfs:comment>
+        <rdfs:label>has first item</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/list.owl#hasLastItem -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/list.owl#hasLastItem">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment>last item - The link to the last item of the list</rdfs:comment>
+        <rdfs:label>has last item</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/list.owl#lastItemOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/list.owl#lastItemOf">
+        <rdfs:label>last item of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/list.owl#nextItem -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/list.owl#nextItem">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment>next item - The link to the next item in a list (ordered collection)</rdfs:comment>
+        <rdfs:label>next item</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/list.owl#previousItem -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/list.owl#previousItem">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment>previous item - The link to the previous item in a list (ordered collection)</rdfs:comment>
+        <rdfs:label>previous item</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyFollows -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyFollows">
+        <rdfs:comment>The intransitive follows relation. For example, Wednesday directly precedes Thursday. Directness of precedence depends on the designer conceptualization.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl"/>
+        <rdfs:label xml:lang="en">directly follows</rdfs:label>
+        <rdfs:label xml:lang="it">segue direttamente</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyPrecedes -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyPrecedes">
+        <rdfs:comment>The intransitive precedes relation. For example, Monday directly precedes Tuesday. Directness of precedence depends on the designer conceptualization.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl"/>
+        <rdfs:label xml:lang="en">directly precedes</rdfs:label>
+        <rdfs:label xml:lang="it">precede direttamente</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#follows -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#follows">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:comment>A relation between entities, expressing a &apos;sequence&apos; schema. 
+E.g. &apos;year 2000 follows 1999&apos;, &apos;preparing coffee&apos; follows &apos;deciding what coffee to use&apos;, &apos;II World War follows I World War&apos;, etc. 
+It can be used between tasks, processes or time intervals, and subproperties would fit best in order to distinguish the different uses.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl"/>
+        <rdfs:label xml:lang="en">follows</rdfs:label>
+        <rdfs:label xml:lang="it">segue</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#precedes -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#precedes">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:comment>A relation between entities, expressing a &apos;sequence&apos; schema. 
+E.g. &apos;year 1999 precedes 2000&apos;, &apos;deciding what coffee to use&apos; precedes &apos;preparing coffee&apos;, &apos;World War II follows World War I&apos;, &apos;in the Milan to Rome autoroute, Bologna precedes Florence&apos;, etc.
+It can then be used between tasks, processes, time intervals, spatially locate objects, situations, etc. 
+Subproperties can be defined in order to distinguish the different uses.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl"/>
+        <rdfs:label xml:lang="it">precede</rdfs:label>
+        <rdfs:label xml:lang="en">precedes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#from_country -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#from_country">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Player"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#played_against -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#played_against">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Player"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Team"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Player"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Team"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">property between a player and the teams and /or players they played against, and also between a team and the teams it played against</rdfs:comment>
+        <rdfs:label xml:lang="en">played against</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#won_against -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#won_against">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#played_against"/>
+        <rdfs:comment xml:lang="en">property between a player and the teams and /or players they won against, and also between a team and the teams it won against</rdfs:comment>
+        <rdfs:label xml:lang="en">won against</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/composed_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/composed_of">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#hasMember"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/played_for"/>
+        <rdfs:comment xml:lang="en">property between a team and the 2 players that it is composed of</rdfs:comment>
+        <rdfs:label xml:lang="en">composed of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/enrolled_in -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/enrolled_in">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Team"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/BVTournament"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/played_match"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/match_of_tournament"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment xml:lang="en">property between a team and the tournament(s) it enrolled in</rdfs:comment>
+        <rdfs:label xml:lang="en">enrolled in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/had_participants -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/had_participants">
+        <rdfs:comment xml:lang="en">property between a tournament and the teams that played in it</rdfs:comment>
+        <rdfs:label xml:lang="en">had participants</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/includes_match -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/includes_match">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#hasItem"/>
+        <rdfs:comment xml:lang="en">property between a tournament and the matches played during the tournament</rdfs:comment>
+        <rdfs:label xml:lang="en">includes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/is_category -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/is_category">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/BVTournament"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Category"/>
+        <rdfs:comment xml:lang="en">property between a tournament and the category it belongs to</rdfs:comment>
+        <rdfs:label>is category</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/is_final_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/is_final_of">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/list.owl#lastItemOf"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/match_of_tournament"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/BVMatch"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/BVTournament"/>
+        <rdfs:comment xml:lang="en">property between the final match of a tournament and the tournament</rdfs:comment>
+        <rdfs:label xml:lang="en">is final of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/match_of_tournament -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/match_of_tournament">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#itemOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/BVMatch"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/BVTournament"/>
+        <rdfs:comment xml:lang="en">property between a match and the tournament during which the match was played</rdfs:comment>
+        <rdfs:label xml:lang="en">held during</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/participated_in -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/participated_in">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Player"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/BVTournament"/>
+        <rdfs:comment xml:lang="en">property between a player and the tournament(s) he took part in</rdfs:comment>
+        <rdfs:label xml:lang="en">participated in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/played_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/played_by">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/played_match"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/BVMatch"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Team"/>
+        <rdfs:comment xml:lang="en">property between a match and the 2 teams that played it</rdfs:comment>
+        <rdfs:label xml:lang="en">played by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/played_for -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/played_for">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#isMemberOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Player"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Team"/>
+        <rdfs:comment xml:lang="en">property between a player and the team(s) he played for</rdfs:comment>
+        <rdfs:label xml:lang="en">played for</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/played_match -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/played_match">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Team"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/BVMatch"/>
+        <rdfs:comment xml:lang="en">property between a team and the match(es) it played</rdfs:comment>
+        <rdfs:label xml:lang="en">played match</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/teammate_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/teammate_of">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Player"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Player"/>
+        <rdfs:comment xml:lang="en">property between 2 players who played in the same team</rdfs:comment>
+        <rdfs:label xml:lang="en">teammate of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/won_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/won_by">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/played_by"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/won_match"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/BVMatch"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Team"/>
+        <rdfs:comment xml:lang="en">property between a match and the team that won it</rdfs:comment>
+        <rdfs:label xml:lang="en">won by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/won_match -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/won_match">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/played_match"/>
+        <rdfs:comment xml:lang="en">property between a team and the match(es) it won</rdfs:comment>
+        <rdfs:label xml:lang="en">won match</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/won_tournament -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/won_tournament">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/enrolled_in"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Team"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/BVTournament"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/won_match"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/is_final_of"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment xml:lang="en">property between a team and the tournament(s) it won</rdfs:comment>
+        <rdfs:label xml:lang="en">won tournament</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#broadMatch -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#broadMatch">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">has broader match</rdfs:label>
+        <skos:definition xml:lang="en">skos:broadMatch is used to state a hierarchical mapping link between two conceptual resources in different concept schemes.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#broader -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#broader">
+        <rdfs:comment xml:lang="en">Broader concepts are typically rendered as parents in a concept hierarchy (tree).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">has broader</rdfs:label>
+        <skos:definition xml:lang="en">Relates a concept to a concept that is more general in meaning.</skos:definition>
+        <skos:scopeNote xml:lang="en">By convention, skos:broader is only used to assert an immediate (i.e. direct) hierarchical link between two conceptual resources.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#broaderTransitive -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#broaderTransitive">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">has broader transitive</rdfs:label>
+        <skos:definition>skos:broaderTransitive is a transitive superproperty of skos:broader.</skos:definition>
+        <skos:scopeNote xml:lang="en">By convention, skos:broaderTransitive is not used to make assertions. Rather, the properties can be used to draw inferences about the transitive closure of the hierarchical relation, which is useful e.g. when implementing a simple query expansion algorithm in a search application.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#closeMatch -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#closeMatch">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">has close match</rdfs:label>
+        <skos:definition xml:lang="en">skos:closeMatch is used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications. In order to avoid the possibility of &quot;compound errors&quot; when combining mappings across more than two concept schemes, skos:closeMatch is not declared to be a transitive property.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#exactMatch -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#exactMatch">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#hasTopConcept -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#hasTopConcept">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">has top concept</rdfs:label>
+        <skos:definition xml:lang="en">Relates, by convention, a concept scheme to a concept which is topmost in the broader/narrower concept hierarchies for that scheme, providing an entry point to these hierarchies.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#inScheme -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#inScheme">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">is in scheme</rdfs:label>
+        <skos:definition xml:lang="en">Relates a resource (for example a concept) to a concept scheme in which it is included.</skos:definition>
+        <skos:scopeNote xml:lang="en">A concept may be a member of more than one concept scheme.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#mappingRelation -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#mappingRelation">
+        <rdfs:comment xml:lang="en">These concept mapping relations mirror semantic relations, and the data model defined below is similar (with the exception of skos:exactMatch) to the data model defined for semantic relations. A distinct vocabulary is provided for concept mapping relations, to provide a convenient way to differentiate links within a concept scheme from links between concept schemes. However, this pattern of usage is not a formal requirement of the SKOS data model, and relies on informal definitions of best practice.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">is in mapping relation with</rdfs:label>
+        <skos:definition xml:lang="en">Relates two concepts coming, by convention, from different schemes, and that have comparable meanings</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#member -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#member">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">has member</rdfs:label>
+        <skos:definition xml:lang="en">Relates a collection to one of its members.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#memberList -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#memberList">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment xml:lang="en">For any resource, every item in the list given as the value of the
+      skos:memberList property is also a value of the skos:member property.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">has member list</rdfs:label>
+        <skos:definition xml:lang="en">Relates an ordered collection to the RDF list containing its members.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#narrowMatch -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#narrowMatch">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">has narrower match</rdfs:label>
+        <skos:definition xml:lang="en">skos:narrowMatch is used to state a hierarchical mapping link between two conceptual resources in different concept schemes.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#narrower -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#narrower">
+        <rdfs:comment xml:lang="en">Narrower concepts are typically rendered as children in a concept hierarchy (tree).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">has narrower</rdfs:label>
+        <skos:definition xml:lang="en">Relates a concept to a concept that is more specific in meaning.</skos:definition>
+        <skos:scopeNote xml:lang="en">By convention, skos:broader is only used to assert an immediate (i.e. direct) hierarchical link between two conceptual resources.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#narrowerTransitive -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#narrowerTransitive">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">has narrower transitive</rdfs:label>
+        <skos:definition>skos:narrowerTransitive is a transitive superproperty of skos:narrower.</skos:definition>
+        <skos:scopeNote xml:lang="en">By convention, skos:narrowerTransitive is not used to make assertions. Rather, the properties can be used to draw inferences about the transitive closure of the hierarchical relation, which is useful e.g. when implementing a simple query expansion algorithm in a search application.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#related -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#related">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:comment xml:lang="en">skos:related is disjoint with skos:broaderTransitive</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">has related</rdfs:label>
+        <skos:definition xml:lang="en">Relates a concept to a concept with which there is an associative semantic relationship.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#relatedMatch -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#relatedMatch">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">has related match</rdfs:label>
+        <skos:definition xml:lang="en">skos:relatedMatch is used to state an associative mapping link between two conceptual resources in different concept schemes.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#semanticRelation -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#semanticRelation">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">is in semantic relation with</rdfs:label>
+        <skos:definition xml:lang="en">Links a concept to a concept related by meaning.</skos:definition>
+        <skos:scopeNote xml:lang="en">This property should not be used directly, but as a super-property for all properties denoting a relationship of meaning between concepts.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#topConceptOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#topConceptOf">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">is top concept in scheme</rdfs:label>
+        <skos:definition xml:lang="en">Relates a concept to the concept scheme that it is a top level concept of.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/bag.owl#size -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#size">
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#Collection"/>
+        <rdfs:label>size</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/had_result -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/had_result">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/BVMatch"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>2-0</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>2-1</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">property between a match and its final score: the score is a string with the numbers of sets won by each of the 2 teams playing the match; since the order if of the teams is irrelevant, the highest score is always attributed to the winning team</rdfs:comment>
+        <rdfs:label xml:lang="en">had result</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/has_gender -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/has_gender">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Player"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>F</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>M</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>not specified</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">property between a player and the string corresponding to their gender (&quot;M&quot;/&quot;F&quot;/&quot;not specified&quot;)</rdfs:comment>
+        <rdfs:label xml:lang="en">has gender</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/held_in_year -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/held_in_year">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/BVTournament"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2000</xsd:minInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">property between a tournament and the integer number, &gt;=2000, which indicates the year the tournament was held in</rdfs:comment>
+        <rdfs:label xml:lang="en">held in year</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.bbc.co.uk/ontologies/sport/EventGender -->
+
+    <owl:Class rdf:about="http://www.bbc.co.uk/ontologies/sport/EventGender">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Category"/>
+        <rdfs:comment xml:lang="en-gb">Enumerated type, typically Male, Female or Mixed.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.bbc.co.uk/ontologies/sport"/>
+        <rdfs:label xml:lang="en-gb">EventGender</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Bag -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Bag">
+        <rdfs:comment>Bag - Collection that can have a number of copies of each object</rdfs:comment>
+        <rdfs:label>(collections) Bag</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Item -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Item">
+        <rdfs:comment>Item - Element belonging to a Bag</rdfs:comment>
+        <rdfs:label>item</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#Collection -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#Collection">
+        <rdfs:comment>Any container for entities that share one or more common properties. E.g. &quot;stone objects&quot;, &quot;the nurses&quot;, &quot;the Louvre Aegyptian collection&quot;. A collection is not a logical class: a collection is a first-order entity, while a class is a second-order one.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl"/>
+        <rdfs:label xml:lang="en">Collection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/list.owl#List -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/cp/owl/list.owl#List">
+        <rdfs:comment>List - An ordered array of items, that can be present in multiple copies</rdfs:comment>
+        <rdfs:label>list</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/list.owl#ListItem -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/cp/owl/list.owl#ListItem">
+        <rdfs:comment>ListItem - Element belonging to a list</rdfs:comment>
+        <rdfs:label>list item</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#NationalTeam -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#NationalTeam">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Team"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#OlympicAthlete -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#OlympicAthlete">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Player"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/BVMatch -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/BVMatch">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/list.owl#ListItem"/>
+        <rdfs:comment xml:lang="en">Match of beach volley between two teams</rdfs:comment>
+        <rdfs:label xml:lang="en">Beach Volley Match</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/BVOlympics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/BVOlympics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/InternationalBVTournament"/>
+        <rdfs:comment xml:lang="en">Beach Volley tournament played during an edition of the Olympic Games</rdfs:comment>
+        <rdfs:label xml:lang="en">Beach Volley Olympics</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/BVTournament -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/BVTournament">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/list.owl#List"/>
+        <rdfs:comment>Tournament of sequential Beach Volley Matches</rdfs:comment>
+        <rdfs:label xml:lang="en">Beach Volley Tournament</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Category -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Category">
+        <rdfs:comment xml:lang="en">Restriction on players allowed to take part in the tournament; enumerated class, only instances are &quot;Male&quot; and &quot;Female&quot;</rdfs:comment>
+        <rdfs:label xml:lang="en">Category</rdfs:label>
+        <skos:exactMatch>https://www.bbc.co.uk/ontologies/sport/EventGender</skos:exactMatch>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/InternationalBVTournament -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/InternationalBVTournament">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/BVTournament"/>
+        <rdfs:comment xml:lang="en">Beach Volley tournament playable by players from different countries</rdfs:comment>
+        <rdfs:label xml:lang="en">Beach Volley International Tournament</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/NationalBVTournament -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/NationalBVTournament">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/BVTournament"/>
+        <rdfs:comment xml:lang="en">Beach Volley Tournament playable only by players from the host country</rdfs:comment>
+        <rdfs:label xml:lang="en">National Beach Volley Tournament</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/NationalChampion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/NationalChampion">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/played_for"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/NationalChampions"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Player"/>
+        <rdfs:comment xml:lang="en">Players who won one or more national beach volley tournaments</rdfs:comment>
+        <rdfs:label xml:lang="en">National Beach Volley Champions</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/NationalChampions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/NationalChampions">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/won_tournament"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/NationalBVTournament"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Team"/>
+        <rdfs:comment xml:lang="en">Teams who won one or more National Beach Volley Tournaments</rdfs:comment>
+        <rdfs:label xml:lang="en">National Beach Volley Champion Team</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/OlympicChampion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/OlympicChampion">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/played_for"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/OlympicChampions"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#OlympicAthlete"/>
+        <rdfs:comment xml:lang="en">Players who won one or more beach volley olympic</rdfs:comment>
+        <rdfs:label xml:lang="en">Olympic Beach Volley Champions</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/OlympicChampions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/OlympicChampions">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/won_tournament"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/BVOlympics"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Team"/>
+        <rdfs:comment xml:lang="en">Teams who won one or more Olympics Beach Volley Tournaments</rdfs:comment>
+        <rdfs:label xml:lang="en">Olympic Beach Volley Champion Team</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Player -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Player">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Item"/>
+        <rdfs:comment xml:lang="en">People who took part in registered Beach Volley Tournaments</rdfs:comment>
+        <rdfs:label xml:lang="en">BeachVolleyPlayer</rdfs:label>
+        <skos:exactMatch>http://dbpedia.org/ontology/BeachVolleyballPlayer</skos:exactMatch>
+        <skos:exactMatch>https://www.wikidata.org/wiki/Q17361156</skos:exactMatch>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Team -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Team">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Bag"/>
+        <rdfs:comment xml:lang="en">Team of 2 beach volley players</rdfs:comment>
+        <rdfs:label xml:lang="en">Beach Volley Team</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#List -->
+
+    <owl:Class rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#Mixed -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#Mixed">
+        <rdf:type rdf:resource="http://www.bbc.co.uk/ontologies/sport/EventGender"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Category"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Benazzi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Benazzi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Player"/>
+        <bvt:has_gender>F</bvt:has_gender>
+        <rdfs:comment xml:lang="en">Benazzi Giada, italian professional female Beach Volley player</rdfs:comment>
+        <rdfs:label xml:lang="en">Benazzi Giada</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Breidenbach -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Breidenbach">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Player"/>
+        <bvt:has_gender>F</bvt:has_gender>
+        <rdfs:comment xml:lang="en">Breidenbach Sara, italian professional female Beach Volley player</rdfs:comment>
+        <rdfs:label xml:lang="en">Breidenbach Sara</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Female -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Female">
+        <rdf:type rdf:resource="http://www.bbc.co.uk/ontologies/sport/EventGender"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Category"/>
+        <rdfs:comment xml:lang="en">instance corresponding to the &quot;Female&quot; category of beach volley tournaments</rdfs:comment>
+        <rdfs:label xml:lang="en">Female</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/FinaleAssolutoFemminile2023 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/FinaleAssolutoFemminile2023">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/NationalBVTournament"/>
+        <bvt:is_category rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Female"/>
+        <rdfs:comment xml:lang="en">2023&apos;s edition of the italian beach volley tournament &quot;Finale Assoluto Femminile&quot;</rdfs:comment>
+        <rdfs:label xml:lang="en">FinaleAssolutoFemminile2023</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Frasca -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Frasca">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Player"/>
+        <bvt:has_gender>F</bvt:has_gender>
+        <rdfs:comment xml:lang="en">Frasca Federica, italian professional female beach volley player</rdfs:comment>
+        <rdfs:label xml:lang="en">Frasca Federica</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Gradini -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Gradini">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Player"/>
+        <bvt:has_gender>F</bvt:has_gender>
+        <rdfs:comment xml:lang="en">Gradini Alice, italian professional female beach volley player</rdfs:comment>
+        <rdfs:label xml:lang="en">Gradini Alice</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Krasilnikov -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Krasilnikov">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Player"/>
+        <bvt:has_gender>M</bvt:has_gender>
+        <rdfs:label xml:lang="en">Vjačeslav Krasil&apos;nikov</rdfs:label>
+        <rdfs:label xml:lang="en">Vjačeslav Krasil&apos;nikov, Russian professional male beach volley player</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Lantignotti -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Lantignotti">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Player"/>
+        <bvt:has_gender>F</bvt:has_gender>
+        <rdfs:comment xml:lang="en">Lantignotti Michela, italian professional female Beach Volley player</rdfs:comment>
+        <rdfs:label xml:lang="en">Lantignotti Michela</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/LatviaTeam2020 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/LatviaTeam2020">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Team"/>
+        <bvt:composed_of rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Plavins"/>
+        <bvt:composed_of rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Tocs"/>
+        <rdfs:comment xml:lang="en">National male beach volley team for Latvia at the Tokyo 2020 Olympics</rdfs:comment>
+        <rdfs:label xml:lang="en">LatviaTeam2020</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/M1F -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/M1F">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/BVMatch"/>
+        <bvt:match_of_tournament rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/FinaleAssolutoFemminile2023"/>
+        <bvt:played_by rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/T1F"/>
+        <bvt:played_by rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/T2F"/>
+        <bvt:won_by rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/T2F"/>
+        <bvt:had_result>2-0</bvt:had_result>
+        <rdfs:comment xml:lang="en">First semifinal of the tournament &quot;Finale Assoluto Femminile 2023&quot;</rdfs:comment>
+        <rdfs:label xml:lang="en">Semifinal1 FinaleAssolutoF2023</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/M2F -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/M2F">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/BVMatch"/>
+        <sequence:follows rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/M1F"/>
+        <bvt:match_of_tournament rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/FinaleAssolutoFemminile2023"/>
+        <bvt:played_by rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/T3F"/>
+        <bvt:played_by rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/T4F"/>
+        <bvt:won_by rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/T4F"/>
+        <bvt:had_result>2-0</bvt:had_result>
+        <rdfs:comment xml:lang="en">Second semifinal of the tournament &quot;Finale Assoluto Femminile 2023&quot;</rdfs:comment>
+        <rdfs:label xml:lang="en">Semifinal2 FinaleAssolutoF2023</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/M3F -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/M3F">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/BVMatch"/>
+        <sequence:follows rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/M2F"/>
+        <bvt:match_of_tournament rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/FinaleAssolutoFemminile2023"/>
+        <bvt:played_by rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/T1F"/>
+        <bvt:played_by rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/T3F"/>
+        <bvt:won_by rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/T3F"/>
+        <bvt:had_result>2-0</bvt:had_result>
+        <rdfs:comment xml:lang="en">Loser&apos;s final of the tournament &quot;Finale Assoluto Femminile 2023&quot;</rdfs:comment>
+        <rdfs:label xml:lang="en">LosersFinal FinaleAssolutoF2023</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/M4F -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/M4F">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/BVMatch"/>
+        <sequence:follows rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/M3F"/>
+        <bvt:is_final_of rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/FinaleAssolutoFemminile2023"/>
+        <bvt:match_of_tournament rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/FinaleAssolutoFemminile2023"/>
+        <bvt:played_by rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/T2F"/>
+        <bvt:played_by rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/T4F"/>
+        <bvt:won_by rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/T2F"/>
+        <bvt:had_result>2-0</bvt:had_result>
+        <rdfs:comment xml:lang="en">Final of the tournament &quot;Finale Assoluto Femminile 2023&quot;</rdfs:comment>
+        <rdfs:label xml:lang="en">Final FinaleAssolutoF2023</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Male -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Male">
+        <rdf:type rdf:resource="http://www.bbc.co.uk/ontologies/sport/EventGender"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Category"/>
+        <rdfs:comment xml:lang="en">instance corresponding to the &quot;Male&quot; category of beach volley tournaments</rdfs:comment>
+        <rdfs:label xml:lang="en">Male</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Mattavelli -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Mattavelli">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Player"/>
+        <bvt:has_gender>F</bvt:has_gender>
+        <rdfs:comment xml:lang="en">Mattavelli Aurora, italian professional female Beach Volley player</rdfs:comment>
+        <rdfs:label xml:lang="en">Mattavelli Aurora</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Mol -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Mol">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Player"/>
+        <bvt:has_gender>M</bvt:has_gender>
+        <rdfs:comment xml:lang="en">Anders Berntsen Mol, Norwegian professional male beach volley player</rdfs:comment>
+        <rdfs:label xml:lang="en">Anders Berntsen Mol</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/NorLatSemi2020 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/NorLatSemi2020">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/BVMatch"/>
+        <bvt:match_of_tournament rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Tokyo2020OlympicsMale"/>
+        <bvt:played_by rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/LatviaTeam2020"/>
+        <bvt:played_by rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/NorwayTeam2020"/>
+        <bvt:won_by rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/NorwayTeam2020"/>
+        <bvt:had_result>2-0</bvt:had_result>
+        <rdfs:comment xml:lang="en">Semifinal between Norway and Latvia male beach volley teams at Tokyo 2020</rdfs:comment>
+        <rdfs:label xml:lang="en">NorLatSemi2020</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/NorROCFinal2020 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/NorROCFinal2020">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/BVMatch"/>
+        <sequence:follows rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/QatLatLFin2020"/>
+        <bvt:is_final_of rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Tokyo2020OlympicsMale"/>
+        <bvt:match_of_tournament rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Tokyo2020OlympicsMale"/>
+        <bvt:played_by rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/NorwayTeam2020"/>
+        <bvt:played_by rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/ROCTeam2020"/>
+        <bvt:won_by rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/NorwayTeam2020"/>
+        <bvt:had_result>2-0</bvt:had_result>
+        <rdfs:label xml:lang="en">Final between Norway and ROC male beach volley teams at Tokyo 2020</rdfs:label>
+        <rdfs:label xml:lang="en">NorROCFinal2020</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/NorwayTeam2020 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/NorwayTeam2020">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Team"/>
+        <bvt:composed_of rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Mol"/>
+        <bvt:composed_of rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Sorum"/>
+        <rdfs:comment xml:lang="en">National male beach volley team for Norway at the Tokyo 2020 Olympics</rdfs:comment>
+        <rdfs:label xml:lang="en">NorwayTeam2020</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Orsi_Toth -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Orsi_Toth">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Player"/>
+        <bvt:has_gender>F</bvt:has_gender>
+        <rdfs:comment xml:lang="en">Orsi Toth Reka, italian professional female Beach Volley player</rdfs:comment>
+        <rdfs:label xml:lang="en">Orsi Toth Reka</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Plavins -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Plavins">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Player"/>
+        <bvt:has_gender>M</bvt:has_gender>
+        <rdfs:comment xml:lang="en">Mārtiņš Pļaviņš, Latvian professional male beach volley player</rdfs:comment>
+        <rdfs:label xml:lang="en">Martins Plavins</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Puccinelli -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Puccinelli">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Player"/>
+        <bvt:has_gender>F</bvt:has_gender>
+        <rdfs:comment xml:lang="en">Puccinelli Claudia, italian professional female Beach Volley player</rdfs:comment>
+        <rdfs:label xml:lang="en">Puccinelli Claudia</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/QatLatLFin2020 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/QatLatLFin2020">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/BVMatch"/>
+        <sequence:follows rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/ROCQatSemi2020"/>
+        <bvt:played_by rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/LatviaTeam2020"/>
+        <bvt:played_by rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/QatarTeam2020"/>
+        <bvt:won_by rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/QatarTeam2020"/>
+        <bvt:had_result>2-0</bvt:had_result>
+        <rdfs:comment xml:lang="en">Loser&apos;s final between Qatar and Latvia male beach volley teams at Tokyo 2020</rdfs:comment>
+        <rdfs:label xml:lang="en">QatLatLFin2020</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/QatarTeam2020 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/QatarTeam2020">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Team"/>
+        <bvt:composed_of rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Tijan"/>
+        <bvt:composed_of rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Younusse"/>
+        <rdfs:comment xml:lang="en">National male beach volley team for Qatar at the Tokyo 2020 Olympics</rdfs:comment>
+        <rdfs:label xml:lang="en">QatarTeam2020</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/ROCQatSemi2020 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/ROCQatSemi2020">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/BVMatch"/>
+        <sequence:follows rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/NorLatSemi2020"/>
+        <bvt:match_of_tournament rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Tokyo2020OlympicsMale"/>
+        <bvt:played_by rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/QatarTeam2020"/>
+        <bvt:played_by rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/ROCTeam2020"/>
+        <bvt:won_by rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/ROCTeam2020"/>
+        <bvt:had_result>2-0</bvt:had_result>
+        <rdfs:comment xml:lang="en">Semifinal between Qatar and ROC male beach volley teams at Tokyo 2020</rdfs:comment>
+        <rdfs:label xml:lang="en">ROCQatSemi2020</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/ROCTeam2020 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/ROCTeam2020">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Team"/>
+        <bvt:composed_of rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Krasilnikov"/>
+        <bvt:composed_of rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Stoyanovskiy"/>
+        <rdfs:comment xml:lang="en">National male beach volley team for Russian Olympic Committee at the Tokyo 2020 Olympics</rdfs:comment>
+        <rdfs:label xml:lang="en">ROCTeam2020</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Sorum -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Sorum">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Player"/>
+        <bvt:has_gender>M</bvt:has_gender>
+        <rdfs:comment xml:lang="en">Christian Sandlie Sorum, Norwegian professional male beach volley player</rdfs:comment>
+        <rdfs:label xml:lang="en">Christian Sandlie Sorum</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Stoyanovskiy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Stoyanovskiy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Player"/>
+        <bvt:has_gender>M</bvt:has_gender>
+        <rdfs:comment xml:lang="en">Oleg Stoyanovskiy, Russian professional male beach volley player</rdfs:comment>
+        <rdfs:label xml:lang="en">Oleg Stoyanovskiy</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/T1F -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/T1F">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Team"/>
+        <bvt:composed_of rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Mattavelli"/>
+        <bvt:composed_of rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Puccinelli"/>
+        <rdfs:comment xml:lang="en">Team composed of Mattavelli and Puccinelli during the tournament &quot;Finale Assoluto Femminile 2023&quot;</rdfs:comment>
+        <rdfs:label xml:lang="en">Team Mattavelli-Puccinelli</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/T2F -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/T2F">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Team"/>
+        <bvt:composed_of rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Benazzi"/>
+        <bvt:composed_of rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Breidenbach"/>
+        <rdfs:comment xml:lang="en">Team composed of Breidebach and Benazzi during the tournament &quot;Finale Assoluto Femminile 2023&quot;</rdfs:comment>
+        <rdfs:label xml:lang="en">Team Breidenbach-Benazzi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/T3F -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/T3F">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Team"/>
+        <bvt:composed_of rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Frasca"/>
+        <bvt:composed_of rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Gradini"/>
+        <rdfs:comment xml:lang="en">Team composed of Gradini and Frasca during the tournament &quot;Finale Assoluto Femminile 2023&quot;</rdfs:comment>
+        <rdfs:label xml:lang="en">Team Gradini-Frasca</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/T4F -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/T4F">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Team"/>
+        <bvt:composed_of rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Lantignotti"/>
+        <bvt:composed_of rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Orsi_Toth"/>
+        <rdfs:comment xml:lang="en">Team composed of Lantignotti and Orsi Toth during the tournament &quot;Finale Assoluto Femminile 2023&quot;</rdfs:comment>
+        <rdfs:label xml:lang="en">Team Lantignotti-OrsiToth</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Tijan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Tijan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Player"/>
+        <bvt:has_gender>M</bvt:has_gender>
+        <rdfs:comment xml:lang="en">Ahmed Tijan, Qatari professional male beach volley player</rdfs:comment>
+        <rdfs:label xml:lang="en">Ahmed Tijan</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Tocs -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Tocs">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Player"/>
+        <bvt:has_gender>M</bvt:has_gender>
+        <rdfs:comment xml:lang="en">Edgars Točs, Latvian professional male beach volley player</rdfs:comment>
+        <rdfs:label xml:lang="en">Edgars Tocs</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Tokyo2020OlympicsMale -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Tokyo2020OlympicsMale">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/BVOlympics"/>
+        <bvt:is_category rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Male"/>
+        <rdfs:comment xml:lang="en">Men&apos;s Beach Volley Tournament at the Tokyo 2020 Summer Olympics</rdfs:comment>
+        <rdfs:label xml:lang="en">Tokyo2020M</rdfs:label>
+        <skos:exactMatch>https://www.wikidata.org/wiki/Q64399562</skos:exactMatch>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Younusse -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Younusse">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Player"/>
+        <bvt:has_gender>M</bvt:has_gender>
+        <rdfs:comment xml:lang="en">Cherif Younousse, Qatari professional male beach volley player</rdfs:comment>
+        <rdfs:label xml:lang="en">Cherif Younousse</rdfs:label>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasUnitTest">
+        <rdfs:comment>This property can be used to annotate a unit test (e.g. in the form of a SPARQL query) to be launched to evaluate an ontology against a requirement-based task.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#isCloneOf">
+        <rdfs:comment>This annotation property is used for referring a cloned ontology entity to its cloning source.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#altLabel">
+        <rdfs:comment xml:lang="en">skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties.</rdfs:comment>
+        <rdfs:label xml:lang="en">alternative label</rdfs:label>
+        <skos:definition xml:lang="en">An alternative lexical label for a resource.</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#changeNote">
+        <rdfs:label xml:lang="en">change note</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#editorialNote">
+        <rdfs:label xml:lang="en">editorial note</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#exactMatch">
+        <rdfs:comment xml:lang="en">skos:exactMatch is disjoint with each of the properties skos:broadMatch and skos:relatedMatch.</rdfs:comment>
+        <rdfs:label xml:lang="en">has exact match</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#hiddenLabel">
+        <rdfs:comment xml:lang="en">skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">hidden label</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#historyNote">
+        <rdfs:label xml:lang="en">history note</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#notation">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">notation</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#note">
+        <rdfs:label xml:lang="en">note</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel">
+        <rdfs:comment xml:lang="en">A resource has no more than one value of skos:prefLabel per language tag, and no more than one value of skos:prefLabel without language tag.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The range of skos:prefLabel is the class of RDF plain literals.</rdfs:comment>
+        <rdfs:label xml:lang="en">preferred label</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#Mixed"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Benazzi"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Breidenbach"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Female"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/FinaleAssolutoFemminile2023"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Frasca"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Gradini"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Krasilnikov"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Lantignotti"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/LatviaTeam2020"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/M1F"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/M2F"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/M3F"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/M4F"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Male"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Mattavelli"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Mol"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/NorLatSemi2020"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/NorROCFinal2020"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/NorwayTeam2020"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Orsi_Toth"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Plavins"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Puccinelli"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/QatLatLFin2020"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/QatarTeam2020"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/ROCQatSemi2020"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/ROCTeam2020"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Sorum"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Stoyanovskiy"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/T1F"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/T2F"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/T3F"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/T4F"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Tijan"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Tocs"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Tokyo2020OlympicsMale"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Younusse"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#p1">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#t1">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#p2">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#t2">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#m">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#p">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#o">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#t">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#tourn">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Rule to distinguish the players that played in a Olympic beach volley tournament</rdfs:comment>
+        <rdfs:label>OlympicAthlete</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Player"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/BVOlympics"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#o"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/participated_in"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#p"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#o"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#OlympicAthlete"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Rule to infer which players took part in which tournaments</rdfs:comment>
+        <rdfs:label>Participated in</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Player"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Team"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/played_for"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#p"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#t"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/BVTournament"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#tourn"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/enrolled_in"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#t"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#tourn"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/participated_in"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#p"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#tourn"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>rule to determine if two players were ever teammates</rdfs:comment>
+        <rdfs:label>Teammate of</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Player"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#p1"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Player"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#p2"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#p1"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#p2"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Team"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#t"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/played_for"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#p1"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#t"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/played_for"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#p2"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#t"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/teammate_of"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#p1"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#p2"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Rule to determine if a player or team played against another player or team</rdfs:comment>
+        <rdfs:label>Played against</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Player"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#p1"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Team"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#t1"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/played_for"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#p1"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#t1"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Player"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#p2"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Team"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#t2"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/played_for"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#p2"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#t2"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/BVMatch"/>
+                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#m"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/played_by"/>
+                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#m"/>
+                                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#t1"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                <rdf:first>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/played_by"/>
+                                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#m"/>
+                                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#t2"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:first>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                        <rdf:first>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
+                                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#t1"/>
+                                                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#t2"/>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:first>
+                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#played_against"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#t1"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#t2"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#played_against"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#p1"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#p2"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#played_against"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#p1"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#t2"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Rule to infer which player or team won against which other players or teams</rdfs:comment>
+        <rdfs:label>Won against</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/BVMatch"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#m"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Team"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#t1"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Team"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#t2"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/played_by"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#m"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#t1"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/played_by"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#m"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#t2"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#t1"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#t2"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/Player"/>
+                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#p1"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/played_for"/>
+                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#p1"/>
+                                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#t1"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                <rdf:first>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/played_for"/>
+                                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#p2"/>
+                                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#t2"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:first>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                        <rdf:first>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments/won_by"/>
+                                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#m"/>
+                                                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#t1"/>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:first>
+                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#won_against"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#p1"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#t2"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#won_against"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#p1"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#p2"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#won_against"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#t1"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/gtess/ontologies/2024/1/BeachVolleyTournaments#t2"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
